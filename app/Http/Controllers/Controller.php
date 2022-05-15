@@ -50,17 +50,14 @@ class Controller extends BaseController
     }
 
     function login(Request $request){
-        // Xu ly dang nhap tai day
         $email = $request->input('email');
         $password = $request->input('password');
 
         $rs = Auth::attempt(['email'=>$email,'password'=>$password]);
         if($rs == true){
-            //  chuyen huong ve home
             return redirect('/');
         }
         else{
-            //  Tra ve view login kem loi -> EMail hoac mat khau khong dung
             return view('login');
         }
     }

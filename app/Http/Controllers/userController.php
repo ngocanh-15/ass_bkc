@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class userController extends Controller
 {
-    //login - signup admin with user (user table)
+    //login - signup admin with user 
     public function showLoginForm()
     {
         return view('user.ad_login');
@@ -25,17 +25,14 @@ class userController extends Controller
             'password.min'=>'Password must be between 6 and 100 characters long',
             'password.max'=>'Password must be between 6 and 100 characters long'
         ]);
-        // Xu ly dang nhap tai day
         $email = $request->input('email');
         $password = $request->input('password');
 
         $rs = Auth::attempt(['email'=>$email,'password'=>$password]);
         if($rs == true){
-            //  chuyen huong ve dashboard
             return redirect('/user/user/dashboard');
         }
         else{
-            // return view('user.ad_login');
             dd($email,$password);
         }
     }

@@ -27,7 +27,7 @@ class Categories extends Model
             'name'=>$name
         ]);
     }
-    // get bản ghi cần edit
+    // get data edit
     static function get_one($categories_id)
     {
         $category = DB::select("SELECT * FROM categories WHERE categories_id = '$categories_id'");
@@ -36,7 +36,6 @@ class Categories extends Model
 
     static function edit($name, $categories_id){
         $result = DB::update("UPDATE categories SET name = '$name' WHERE categories_id='$categories_id'");
-        //dd($result);
         return $result;
     }
     

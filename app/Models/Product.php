@@ -29,7 +29,7 @@ class Product extends Model
             'categories_id' => $categories_id
         ]);
     }
-    // get bản ghi cần edit
+    // get data edit
     static function get_one($product_id)
     {
         $product = DB::select("SELECT * FROM product WHERE product_id = '$product_id'");
@@ -38,7 +38,6 @@ class Product extends Model
     static function edit($name,$image,$unit_price,$quantity,$status,$date,$user_id,$categories_id,$product_id){
         $result = DB::update
         ("UPDATE product SET name = '$name', image = '$image', unit_price = '$unit_price', quantity = '$quantity', status = '$status', date = '$date', user_id = '$user_id', categories_id = '$categories_id' WHERE product_id='$product_id' ");
-        //dd($result);
         return $result;
     }
 }

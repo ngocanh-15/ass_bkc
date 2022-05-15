@@ -47,7 +47,7 @@
                     <div class="col-sm-12">
                     <h4 class="brief"><i>Infomation</i></h4>
                     <div class="left col-sm-7">
-                        <h2>CEO Pham</h2>
+                        <h2>CEO Nguyen</h2>
                         <p><strong>About: </strong> Web Designer / UI. </p>
                         <ul class="list-unstyled">
                         <li><i class="fa fa-building"></i> Address: </li>
@@ -85,7 +85,7 @@
                     <div class="col-sm-12">
                     <h4 class="brief"><i>Infomation</i></h4>
                     <div class="left col-sm-7">
-                        <h2>CEO Nguyen</h2>
+                        <h2>CEO Truong</h2>
                         <p><strong>About: </strong> business </p>
                         <ul class="list-unstyled">
                         <li><i class="fa fa-building"></i> Address: </li>

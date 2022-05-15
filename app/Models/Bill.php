@@ -17,7 +17,6 @@ class Bill extends Model
      */
     protected $table = "bill";
 
-    // get bản ghi
     static function get_one($bill_id)
     {
         $bill = DB::select("SELECT * FROM bill WHERE bill_id = '$bill_id'");
